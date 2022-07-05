@@ -8,7 +8,7 @@ function reverse(num) {
     str = str.join("");
     return str;
 }
-// console.log(reverse(32243));
+console.log(reverse(32243));
 
 /** ------------------------------------------------------------
  * 2. Palindrome
@@ -18,8 +18,8 @@ function isPalindrome(str) {
     isPalin = noSpaces === reverse(noSpaces);
     return isPalin;
 }
-// console.log(isPalindrome('nurses run'));
-// console.log(isPalindrome('madam'));
+console.log(isPalindrome('nurses run'));
+console.log(isPalindrome('madam'));
 
 /** ------------------------------------------------------------
  * 3. Generate all combinations
@@ -48,7 +48,7 @@ function combos(str1) {
     }
     return combinations.splice("");
 }
-// console.log(combos('dog'));
+console.log(combos('dog'));
 
 /** ------------------------------------------------------------
  * 4. Alphabetical
@@ -59,7 +59,7 @@ function alphabetical(str) {
 
     return temp;
 }
-// console.log(alphabetical('webmaster'));
+console.log(alphabetical('webmaster'));
 
 /** ------------------------------------------------------------
  * 5. captitalize first letter
@@ -77,7 +77,7 @@ function capitalize(str) {
     return temp.join(" ");
 
 }
-// console.log(capitalize('the quick brown fox'));
+console.log(capitalize('the quick brown fox'));
 
 /** ------------------------------------------------------------
  * 6. longest word in string
@@ -98,7 +98,7 @@ function longestW(str) {
 
 }
 
-// console.log(longestW('Web Development Tutorial'));
+console.log(longestW('Web Development Tutorial'));
 
 /** ------------------------------------------------------------
  * 7. counts all vowels
@@ -120,7 +120,7 @@ function countVowel(str) {
     return counter;
 }
 
-// console.log(countVowel('The quick brown fox'));
+console.log(countVowel('The quick brown fox'));
 
 /** ------------------------------------------------------------
  * 8. prime number
@@ -141,7 +141,7 @@ function primeNumber(num) {
 
     return true;
 }
-// console.log(primeNumber(13));
+console.log(primeNumber(13));
 
 /** ------------------------------------------------------------
  * 9. return type
@@ -150,13 +150,13 @@ function primeNumber(num) {
 function getType(arg) {
     return typeof arg;
 }
-// let variable;
-// console.log(getType(34));
-// console.log(getType({}));
-// console.log(getType('34'));
-// console.log(getType(variable));
-// console.log(getType(true));
-// console.log(getType(()=>{}));
+let variable;
+console.log(getType(34));
+console.log(getType({}));
+console.log(getType('34'));
+console.log(getType(variable));
+console.log(getType(true));
+console.log(getType(()=>{}));
 
 /** ------------------------------------------------------------
  * 10. make matrix based on 'n', rows by cols
@@ -174,7 +174,7 @@ function makeMatrix(n) {
 
     return arr;
 }
-// console.log(makeMatrix(3));
+console.log(makeMatrix(3));
 
 /** ------------------------------------------------------------
  * 11. second lowest and second greatest numbers
@@ -192,7 +192,7 @@ function secLowHigh(list) {
     return lowest;
 }
 
-// console.log(secLowHigh(nums));
+console.log(secLowHigh(nums));
 /** ------------------------------------------------------------
  * 12. perfect number
  */
@@ -212,7 +212,7 @@ function perfectNum(num) {
         total += number;
     }
 
-    // console.log('total', total);
+    console.log('total', total);
 
     if (num == total) {
         return true;
@@ -226,7 +226,7 @@ function perfectNum(num) {
 //         console.log('perfect num: ', i);
 //     }
 // }
-// console.log(perfectNum(7));
+console.log(perfectNum(7));
 
 /** ------------------------------------------------------------
  * 13. factors of the number
@@ -242,7 +242,7 @@ function factorsOf(num) {
     }
     return list;
 }
-// console.log(factorsOf(21));
+console.log(factorsOf(21));
 
 /** ------------------------------------------------------------
  * 14. factors of the number
@@ -280,7 +280,7 @@ function numOfCoins(num) {
 
     return coins;
 }
-// console.log(numOfCoins(46));
+console.log(numOfCoins(46));
 
 /** ------------------------------------------------------------
  * 15. raise exponent
@@ -290,7 +290,7 @@ function exponentOf(b, n) {
     return Math.pow(b, n);
 }
 
-// console.log(exponentOf(2,3));
+console.log(exponentOf(2,3));
 
 /** ------------------------------------------------------------
  * 16. unique characters
@@ -316,7 +316,7 @@ function unique(str) {
     return temp;
 }
 
-// console.log(unique('thequickbrownfoxjumpsoverthelazydog'));
+console.log(unique('thequickbrownfoxjumpsoverthelazydog'));
 
 /** ------------------------------------------------------------
  * 17. number of occurrences in the specified string
@@ -337,7 +337,7 @@ function numOfOccur(str) {
 
     return occurr;
 }
-// console.log(numOfOccur('sswwwee333ffkkk'));
+console.log(numOfOccur('sswwwee333ffkkk'));
 
 /** ------------------------------------------------------------
  * 18. binary search a javscript array
@@ -365,7 +365,7 @@ function binarySearch(list, search) {
     return false;
 }
 
-// console.log(binarySearch([2, 4, 6, 8, 10, 12, 14, 16, 18], 6));
+console.log(binarySearch([2, 4, 6, 8, 10, 12, 14, 16, 18], 6));
 
 /** ------------------------------------------------------------
  * 19. returns elements larger than int
@@ -384,7 +384,7 @@ function largerNumber(num, list) {
     return temp;
 }
 
-// console.log(largerNumber(2, [1,2,3,7,9,11,45])); G^xcW@dl
+console.log(largerNumber(2, [1,2,3,7,9,11,45]));
 
 /** ------------------------------------------------------------
  * 20. generate string of specified length from random characters
@@ -404,7 +404,7 @@ function generateID(len) {
     return temp;
 }
 
-// console.log(generateID(10));
+console.log(generateID(10));
 
 /** ------------------------------------------------------------
  * 21. get all possible subsets with fixed length combinations in an array
@@ -419,7 +419,7 @@ function possibleSubsets(list, len) {
 
     return list;
 }
-// console.log(possibleSubsets([4,2,5,6]));
+console.log(possibleSubsets([4,2,5,6]));
 
 
 /** ------------------------------------------------------------
@@ -450,7 +450,7 @@ function letterOccurences(str, letter) {
     // }
 }
 
-// console.log(letterOccurences('microsoft.com', 'o'));
+console.log(letterOccurences('microsoft.com', 'o'));
 
 /** ------------------------------------------------------------
  * 23. find first not repeated letter 
@@ -468,7 +468,7 @@ function notRepeated(str) {
     return null;
 }
 
-// console.log(notRepeated('abacddbecefffewarawbarw'));
+console.log(notRepeated('abacddbecefffewarawbarw'));
 
 /** ------------------------------------------------------------
  * 24. bubble sort 
@@ -489,7 +489,7 @@ function bubbleSort(arr) {
 
     return arr;
 }
-// console.log(bubbleSort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]));
+console.log(bubbleSort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]));
 
 /** ------------------------------------------------------------
  * 25. longest country in list
@@ -507,7 +507,7 @@ function longestCountry(list) {
     return list[longest];
 }
 
-// console.log(longestCountry(["Australia", "United States of America", "Germany" ]));
+console.log(longestCountry(["Australia", "United States of America", "Germany" ]));
 
 /** ------------------------------------------------------------
  * 26. longest substring in a given string without repeating characters
@@ -533,7 +533,7 @@ let hello = (name) => {
     return "Hi I'm, " + name;
 };
 
-// console.log(passFunct(hello, "Tim"));
+console.log(passFunct(hello, "Tim"));
 
 /** ------------------------------------------------------------
  * 29. function that gets function name
@@ -545,4 +545,4 @@ function nameIt(fun){
     return fun.name;
 }
 
-// console.log(nameIt(heresAName));
+console.log(nameIt(heresAName));
