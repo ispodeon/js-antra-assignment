@@ -346,23 +346,23 @@ function numOfOccur(str) {
 function binarySearch(list, search) {
     let sorted = list.sort((a, b) => a - b);
 
-        length = sorted.length - 1;
+    length = sorted.length - 1;
 
-        middle = Math.floor(length / 2);
+    middle = Math.floor(length / 2);
 
-        if(search == sorted[middle]){
-            return true;
-        }
+    if (search == sorted[middle]) {
+        return true;
+    }
 
-        if(search > sorted[middle]){
-            return binarySearch(sorted.slice(middle +1, sorted.length),search);
-        }
+    if (search > sorted[middle]) {
+        return binarySearch(sorted.slice(middle + 1, sorted.length), search);
+    }
 
-        if(search < sorted[middle]){
-            return binarySearch(sorted.slice(0, middle),search);
-        }
+    if (search < sorted[middle]) {
+        return binarySearch(sorted.slice(0, middle), search);
+    }
 
-        return false;
+    return false;
 }
 
 // console.log(binarySearch([2, 4, 6, 8, 10, 12, 14, 16, 18], 6));
@@ -371,12 +371,12 @@ function binarySearch(list, search) {
  * 19. returns elements larger than int
  */
 
-function largerNumber(num, list){
+function largerNumber(num, list) {
 
     temp = [];
 
-    for(let i of list){
-        if(i > num){
+    for (let i of list) {
+        if (i > num) {
             temp.push(i);
         }
     }
@@ -391,13 +391,13 @@ function largerNumber(num, list){
  */
 
 function generateID(len) {
-    let characters =  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
     arr = characters.split("");
 
     temp = "";
 
-    for(let i = 0; i < len; i++){
+    for (let i = 0; i < len; i++) {
         temp += arr[Math.floor(arr.length * Math.random())];
     }
 
@@ -409,7 +409,7 @@ function generateID(len) {
 /** ------------------------------------------------------------
  * 21. get all possible subsets with fixed length combinations in an array
  */
-function possibleSubsets(list, len){
+function possibleSubsets(list, len) {
 
     temp = [];
 
@@ -424,21 +424,30 @@ function possibleSubsets(list, len){
 
 /** ------------------------------------------------------------
  * 22. count occurrences of letter in string 
- * 
- * @todo :: FINISH ------- MUST
  */
 
-function letterOccurences(str, letter){
+function letterOccurences(str, letter) {
     arr = str.split("");
 
     count = 0;
 
-    for(let item of arr){
-        if(letter == item )
-            count++;
+    // for (let i = 0; i < arr.length; i++) {
+
+    if (arr.some(isSame)) {
+        return true;
+    } else {
+        return false;
     }
 
-    return count;
+    function isSame(num) {
+        if (num == letter) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    // }
 }
 
 // console.log(letterOccurences('microsoft.com', 'o'));
@@ -447,19 +456,16 @@ function letterOccurences(str, letter){
  * 23. find first not repeated letter 
  */
 
-function notRepeated(str){
+function notRepeated(str) {
     // arr = str.split("");
     arr = str.split("");
 
-    for(let item of arr){
-        if(arr.lastIndexOf(item) == arr.indexOf(item))
-        return item;
+    for (let item of arr) {
+        if (arr.lastIndexOf(item) == arr.indexOf(item))
+            return item;
     }
 
     return null;
-    
-    
-    // return false;
 }
 
 // console.log(notRepeated('abacddbecefffewarawbarw'));
@@ -469,14 +475,14 @@ function notRepeated(str){
  */
 //takes a list, compares each adjacent item and swap if they are in wrong order
 
-function bubbleSort(arr){
+function bubbleSort(arr) {
 
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length; j++) {
-            if(arr[i] > arr[j]){
+            if (arr[i] > arr[j]) {
 
             } else {
-               [arr[i], arr[j]] = [arr[j], arr[i]]; //swapped
+                [arr[i], arr[j]] = [arr[j], arr[i]]; //swapped
             }
         }
     }
@@ -489,12 +495,12 @@ function bubbleSort(arr){
  * 25. longest country in list
  */
 
-function longestCountry(list){
+function longestCountry(list) {
     longest = 0;
 
     for (let i = 0; i < list.length; i++) {
-        if(list[i] < list[i +1]){
-            longest = i +1;
+        if (list[i] < list[i + 1]) {
+            longest = i + 1;
         };
     }
 
@@ -506,6 +512,12 @@ function longestCountry(list){
 /** ------------------------------------------------------------
  * 26. longest substring in a given string without repeating characters
  */
+function longestNonRepeat(str){
+    arr = str.split("");
+
+    return arr;
+}
+console.log(longestNonRepeat("abcdeqwedadefghijklmnopqfassd"));
 
 /** ------------------------------------------------------------
  * 27. returns longest palindrome in a given string
@@ -514,7 +526,23 @@ function longestCountry(list){
 /** ------------------------------------------------------------
  * 28. function that pass a javascript function as parameter
  */
+let passFunct = (cb, name) => {
+    return cb(name);
+};
+let hello = (name) => {
+    return "Hi I'm, " + name;
+};
+
+// console.log(passFunct(hello, "Tim"));
 
 /** ------------------------------------------------------------
  * 29. function that gets function name
  */
+
+function heresAName(){}
+
+function nameIt(fun){
+    return fun.name;
+}
+
+// console.log(nameIt(heresAName));
